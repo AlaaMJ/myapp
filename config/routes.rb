@@ -1,6 +1,9 @@
 Myapp::Application.routes.draw do
-  root 'welcome#index'
+  # get "users/index"
+  # get "users/show"
+  # root 'welcome#index'
   
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
