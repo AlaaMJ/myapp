@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subject :</b>
+  <%= @message.subject %>
+</p>
+
+<p>
+  <b>Sent By :</b>
+  <h5><a href="/users/<%= @message.sender_id %>"><%= User.find(@message.sender_id).first_name %></a></h5>
+</p>
+
+<p>
+  <b>Body :</b>
+  <%= @message.content %>
+</p>
+
+
+
+
+<%= link_to 'Back', messages_path %>

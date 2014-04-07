@@ -1,9 +1,24 @@
 Myapp::Application.routes.draw do
+   get "sessions/login"
+   get "sessions/home"
+  get "sessions/profile"
+   get "sessions/setting"
+  # get "messages/index"
+  # get "messages/show"
+  # get "rooms/index"
+  # get "rooms/show"
   # get "users/index"
   # get "users/show"
   root 'welcome#index'
   
   resources :users
+  
+  resources :messages
+  post ':controller(/:action(/:id(.:format)))'
+  get ':controller(/:action(/:id(.:format)))'
+  
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

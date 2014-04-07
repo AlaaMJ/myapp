@@ -51,3 +51,5 @@ end
 gem 'rails_12factor', group: :production
 
 gem 'protected_attributes'
+
+gem 'bcrypt-ruby', :require => 'bcrypt'

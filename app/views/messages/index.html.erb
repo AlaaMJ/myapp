@@ -1,0 +1,18 @@
+<h1>Inbox</h1>
+<table>
+	<thead>
+		<th> # </th>
+		<th> From </th>
+		<th> Subject </th>
+	</thead>
+	<tbody>
+	  <% @messages.each do |message| %>
+	  	<tr>
+	  		<td></td>
+	      <td><a href="/users/<%= message.sender_id %>"><%= User.find(message.sender_id).first_name %></a></td>
+	      <td><a href="/message/<%= message.id %>"><%= message.subject %></a></td>
+	    </tr>
+	  <% end %>
+	</tbody>
+</table>
+
